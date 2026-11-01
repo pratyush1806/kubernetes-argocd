@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/pratyush1806/minikube-argocd-demo.git
+    repoURL: https://github.com/pratyush1806/kubernetes-argocd.git
     targetRevision: main
     path: k8s
 
