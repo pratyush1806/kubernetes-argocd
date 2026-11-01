@@ -76,7 +76,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o json
 }
 ```
 
-# Access ArgoCD
+# Access ArgoCD UI
 ```
 https://localhost:8181/
 ```
@@ -96,4 +96,26 @@ kubectl apply -f argocd-app.yaml
 application.argoproj.io/python-app created
 ```
 
+### Check status
+```
+kubectl get all -n python-app -o wide
+
+NAME                              READY   STATUS    RESTARTS   AGE   IP           NODE           NOMINATED NODE   READINESS GATES
+pod/python-app-77dcf86589-dczff   1/1     Running   0          15m   10.244.2.9   minikube-m03   <none>           <none>
+pod/python-app-77dcf86589-h9r2d   1/1     Running   0          15m   10.244.1.9   minikube-m02   <none>           <none>
+
+NAME                         TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE   SELECTOR
+service/python-app-service   NodePort   10.105.1.195   <none>        8000:30675/TCP   31m   app=python-app
+
+NAME                         READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                   SELECTOR
+deployment.apps/python-app   2/2     2            2           31m   python-app   prat1980/python-app:v1   app=python-app
+
+NAME                                    DESIRED   CURRENT   READY   AGE   CONTAINERS   IMAGES                   SELECTOR
+replicaset.apps/python-app-77dcf86589   2         2         2       15m   python-app   prat1980/python-app:v1   app=python-app,pod-template-hash=77dcf86589
+```
+
+### Check ArgoCD Applications
+
 ![App in Sync](assets/argocd-03.png)
+
+![App in Sync](assets/argocd-04.png)
