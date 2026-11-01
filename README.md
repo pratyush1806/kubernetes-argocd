@@ -92,4 +92,8 @@ The process of building the application and then pushing it to the Docker Hub is
 ### Create an Argo CD Application.
 ```
 kubectl apply -f argocd-app.yaml
+
+application.argoproj.io/python-app created
 ```
+
+![App in Sync](assets/argocd-03.png)
