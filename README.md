@@ -87,7 +87,7 @@ https://localhost:8181/
 
 ### Build the application and Push to Docker Hub
 The process of building the application and then pushing it to the Docker Hub is explained in the Readme file inside the app directory.
-> This process can be skipped if my Docker image is used.
+> This process can be skipped if my public Docker Hub image is used instead.
 
 ### Create an Argo CD Application.
 ```
