@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: python-app
-          image: prat_1980/python-app:v1
+          image: prat1980/python-app:v1
           imagePullPolicy: Never
 
           ports:
