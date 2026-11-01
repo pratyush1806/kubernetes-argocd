@@ -79,3 +79,5 @@ d2521f7ab0b8: Pushed
 7df94feee8ed: Pushed 
 v1: digest: sha256:d266c10a234dff8f4ed6d51c4cc4bfa5f9a3c4d905f33c2aed5fe8ccfcb04844 size: 856
 ```
+
+![Docker Upload Success](../assets/docker-03.png)
