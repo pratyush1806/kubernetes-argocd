@@ -1,0 +1,18 @@
+# OS files
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Kubernetes
+*.secret.yaml
+*.secret.yml
+secrets.yaml
+secrets.yml
+
+# Kubernetes local/generated files
+.kube/
+minikube/
