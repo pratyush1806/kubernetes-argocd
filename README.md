@@ -119,3 +119,13 @@ replicaset.apps/python-app-77dcf86589   2         2         2       15m   python
 ![App in Sync](assets/argocd-03.png)
 
 ![App in Sync](assets/argocd-04.png)
+
+### Access the application
+```
+kubectl port-forward svc/python-app-service 8000:8000 -n python-app
+
+Forwarding from 127.0.0.1:8000 -> 8000
+Forwarding from [::1]:8000 -> 8000
+```
+
+![Python App](assets/python-app.png)
